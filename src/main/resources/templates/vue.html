@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Product App</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+	<div id="app">
+		<div class="cart">
+			<p>Cart({{ cart.length }})</p>
+		</div>
+		<product :premium="premium" @add-to-cart="updateCart"></product>
+		
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script th:src="@{/script.js}"></script>
+</body>
+</html>
